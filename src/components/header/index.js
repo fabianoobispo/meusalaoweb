@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Notifications from '~/components/Notifications';
 
 import logo from '~/assets/logo-purple.svg';
+import perfil from '~/assets/perfilpadrao.jpg';
 import { Container, Content, Profile } from './styles';
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
               <strong>{profile.name}</strong>
               <Link to="/profile">Meu Perfil</Link>
             </div>
-            <img src={profile.avatar.url} alt="Fabiano Bispo " />
+            <img src={perfil || profile.avatar.url} alt="Fabiano Bispo " />
           </Profile>
         </aside>
       </Content>
